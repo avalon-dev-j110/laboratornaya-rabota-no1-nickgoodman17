@@ -1,5 +1,8 @@
 package ru.avalon.java.dev.j10.labs.models;
 
+import static com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type.String;
+import java.time.LocalDate;
+
 /**
  * Представление о человеке.
  * <p>
@@ -12,6 +15,10 @@ package ru.avalon.java.dev.j10.labs.models;
  * </ol>
  */
 public class Person {
+
+    public Person(String ivanov, String ivan, String ivanovich) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 
     /**
      * Возврвщает полное имя человека.
@@ -34,6 +41,13 @@ public class Person {
         /*
          * TODO(Студент): Закончить определение метода 'getFullName()' класса 'Person'
          */
+        
+            
+        Passport pasport = new Passport(String seria, String name, String family, String otchestvo, String name_two, LocalDate bdate, LocalDate dateOther, String comment);    
+        if( otchestvo == null ){ 
+        return family + name + otchestvo;
+        }
+        
         return null;
     }
 

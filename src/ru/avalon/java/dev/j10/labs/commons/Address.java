@@ -1,3 +1,7 @@
+package ru.avalon.java.dev.j10.labs.commons;
+public class Address {
+    
+}
 /*
  * TODO(Студент): Создайте класс Address.
  *

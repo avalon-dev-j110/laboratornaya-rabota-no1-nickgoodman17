@@ -1,5 +1,5 @@
 package ru.avalon.java.dev.j10.labs.models;
-
+import java.time.LocalDate;
 /**
  * Представление о паспортных данных человека.
  * <p>
@@ -15,8 +15,28 @@ package ru.avalon.java.dev.j10.labs.models;
  *  <li> орган, выдавший документ.
  * </ol>
  */
-class Passport {
+public class Passport {
 
+    String seria;
+    String name;
+    String family;
+    String otchestvo;
+    String name_two;
+    LocalDate bdate;
+    LocalDate dateOther;
+    String comment;
+    
+    public Passport(String seria, String name, String family, String otchestvo, String name_two, LocalDate bdate, LocalDate dateOther, String comment) {
+        this.seria=seria;
+        this.name=name;
+        this.family=family;
+        this.otchestvo=otchestvo;
+        this.name_two=name_two;
+        this.bdate=bdate;
+        this.dateOther=dateOther;
+        this.comment=comment;
+        
+    }
     /*
      * TODO(Студент): Закончить определение класса.
      *
@@ -37,4 +57,12 @@ class Passport {
      * 5. Обеспечте возможность использования класса за
      *    пределами пакета.
      */
+
+    Passport() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    Passport(Type String) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }

@@ -1,5 +1,6 @@
 package ru.avalon.java.dev.j10.labs;
 
+import ru.avalon.java.dev.j10.labs.models.Building;
 import ru.avalon.java.dev.j10.labs.models.Person;
 
 public class Main {
@@ -7,11 +8,17 @@ public class Main {
     /*
      * FIXME(Студент): Измените определение метода так, чтобы он стал точкой входа в приложение.
      */
-    Main() {
 
-        Person ivanov = null;
+    public static void main(String[] args) {
+        Person ivanov = null; 
         Person smith = null;
-
+        
+        ivanov = new Person ("Ivanov", "Ivan", "Ivanovich");
+        smith = new Person ("Smith", "John", "Edvard");
+        Building myBuilding = new Building ("red", 4);
+        //вызываем метод объекта и кладем возвращенное методом значение в переменную
+        String muBuildingDescription = myBuilding.getBuildingDescription();
+        //выводим значение в консоль
         /*
          * TODO(Студент): Создайте экземпляры класса 'Person'
          *
@@ -23,7 +30,7 @@ public class Main {
          *    чтобы она адресовала объект типа 'Person'
          *    описывающий человека по имени 'John Edvard Smith'.
          */
-
+        
         /*
          * TODO(Студент): Создайте несколько строковых переменных:
          *

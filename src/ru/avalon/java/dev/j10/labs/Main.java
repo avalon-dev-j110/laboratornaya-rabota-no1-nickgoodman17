@@ -12,11 +12,7 @@ public class Main {
     /*
      * FIXME(Студент): Измените определение метода так, чтобы он стал точкой входа в приложение.
      */
-    public Main() {
-
-        
-        Person smith = null;
-    }
+    
     /**
      *
      * @param args

@@ -1,5 +1,103 @@
 package ru.avalon.java.dev.j10.labs.models;
-import java.time.LocalDate;
+
+import java.util.Date;
+
+public class Passport {
+    private String seria;
+    private String number;
+    private String fam;
+    private String name;
+    private String ot;
+    private String name2;
+    private Date dateBirth;
+    private Date dateOther;
+    private String placeOther;
+
+    public Passport(String seria, String number, Date dateBirth, Date dateOther, String placeOther) {
+        this.seria = seria;
+        this.number = number;
+        this.dateBirth = dateBirth;
+        this.dateOther = dateOther;
+        this.placeOther = placeOther;
+    }
+
+    public Passport() {
+    }
+
+    public String getSeria() {
+        return seria;
+    }
+
+    public void setSeria(String seria) {
+        this.seria = seria;
+    }
+
+    public String getNumber() {
+        return number;
+    }
+
+    public void setNumber(String number) {
+        this.number = number;
+    }
+
+    public String getFam() {
+        return fam;
+    }
+
+    public void setFam(String fam) {
+        this.fam = fam;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getOt() {
+        return ot;
+    }
+
+    public void setOt(String ot) {
+        this.ot = ot;
+    }
+
+    public String getName2() {
+        return name2;
+    }
+
+    public void setName2(String name2) {
+        this.name2 = name2;
+    }
+
+    public Date getDateBirth() {
+        return dateBirth;
+    }
+
+    public void setDateBirth(Date dateBirth) {
+        this.dateBirth = dateBirth;
+    }
+
+    public Date getDateOther() {
+        return dateOther;
+    }
+
+    public void setDateOther(Date dateOther) {
+        this.dateOther = dateOther;
+    }
+
+    public String getPlaceOther() {
+        return placeOther;
+    }
+
+    public void setPlaceOther(String placeOther) {
+        this.placeOther = placeOther;
+    }
+    
+    
+}
 /**
  * Представление о паспортных данных человека.
  * <p>
@@ -15,28 +113,9 @@ import java.time.LocalDate;
  *  <li> орган, выдавший документ.
  * </ol>
  */
-public class Passport {
 
-    String seria;
-    String name;
-    String family;
-    String otchestvo;
-    String name_two;
-    LocalDate bdate;
-    LocalDate dateOther;
-    String comment;
     
-    public Passport(String seria, String name, String family, String otchestvo, String name_two, LocalDate bdate, LocalDate dateOther, String comment) {
-        this.seria=seria;
-        this.name=name;
-        this.family=family;
-        this.otchestvo=otchestvo;
-        this.name_two=name_two;
-        this.bdate=bdate;
-        this.dateOther=dateOther;
-        this.comment=comment;
-        
-    }
+
     /*
      * TODO(Студент): Закончить определение класса.
      *
@@ -57,12 +136,4 @@ public class Passport {
      * 5. Обеспечте возможность использования класса за
      *    пределами пакета.
      */
-
-    Passport() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    Passport(Type String) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-}
+    

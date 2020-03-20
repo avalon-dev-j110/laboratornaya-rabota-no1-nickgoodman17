@@ -1,24 +1,42 @@
 package ru.avalon.java.dev.j10.labs;
-
-import ru.avalon.java.dev.j10.labs.models.Building;
+import java.time.Instant;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.GregorianCalendar;
+import ru.avalon.java.dev.j10.labs.commons.Address;
 import ru.avalon.java.dev.j10.labs.models.Person;
+import ru.avalon.java.dev.j10.labs.models.Passport;
 
 public class Main {
 
     /*
      * FIXME(Студент): Измените определение метода так, чтобы он стал точкой входа в приложение.
      */
+    public Main() {
 
-    public static void main(String[] args) {
-        Person ivanov = null; 
-        Person smith = null;
         
-        ivanov = new Person ("Ivanov", "Ivan", "Ivanovich");
-        smith = new Person ("Smith", "John", "Edvard");
-        Building myBuilding = new Building ("red", 4);
-        //вызываем метод объекта и кладем возвращенное методом значение в переменную
-        String muBuildingDescription = myBuilding.getBuildingDescription();
-        //выводим значение в консоль
+        Person smith = null;
+    }
+    /**
+     *
+     * @param args
+     */
+    /*set установить значение
+    get получить значение*/
+    
+    public static void main (String[] args){
+        Address addressIvanov = new Address();//"S-Peterburg", "ulica", "12");
+        addressIvanov.setAddress("Санкт-Петербург", "Думская", "6");      
+        Passport passport = new Passport (); 
+        passport.setNumber("1212");
+        Address addressSmith = new Address();
+        addressSmith.setAddress("Ekaterinburg", "Lenina street", "123");
+                
+         Person ivanov = new Person("Иванов","Иван","Иванович", null, addressIvanov);
+         Person smith = new Person("John","Edvard", null, "Smith", addressSmith);
+         System.out.println(ivanov.getFullName() + " " + ivanov.getAddress().getFullAddress().toString());
+         System.out.println(smith.getFullName() + " " + addressSmith.getFullAddress().toString());
+        }
         /*
          * TODO(Студент): Создайте экземпляры класса 'Person'
          *
@@ -30,7 +48,7 @@ public class Main {
          *    чтобы она адресовала объект типа 'Person'
          *    описывающий человека по имени 'John Edvard Smith'.
          */
-        
+
         /*
          * TODO(Студент): Создайте несколько строковых переменных:
          *
@@ -57,5 +75,5 @@ public class Main {
          * Значение каждой переменной должно быть выведено на
          * отдельной строке.
          */
-    }
+    
 }
